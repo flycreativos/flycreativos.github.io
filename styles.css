@@ -347,12 +347,11 @@ body {
 
 .hero__wave {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: scaleY(-1);
 }
 
 .hero__wave svg {
@@ -360,7 +359,7 @@ body {
     display: block;
     width: calc(100% + 1.3px);
     height: 80px;
-    fill: white;
+    fill: var(--accent);
 }
 
 /* Servicios Section */
