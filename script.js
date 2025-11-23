@@ -47,7 +47,7 @@ const formMessage = document.getElementById('formMessage');
 // Regístrate en https://formspree.io/ y obtén tu endpoint
 // Reemplaza 'YOUR_FORM_ID' con tu ID de Formspree
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqajowdy';
 
 // OPCIÓN 2: Usar EmailJS (Alternativa)
 // Descomentar si prefieres usar EmailJS

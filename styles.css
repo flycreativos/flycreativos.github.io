@@ -352,6 +352,7 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: scaleY(-1);
 }
 
 .hero__wave svg {
@@ -493,26 +494,43 @@ body {
 }
 
 .logos__track {
-    display: flex;
-    gap: 3rem;
-    animation: scroll 30s linear infinite;
+  display: flex;
+  gap: 3rem;
+  width: max-content;              /* se ajusta al contenido */
+  animation: scroll 20s linear infinite; /* velocidad más suave */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);   /* mueve la mitad (porque duplicamos) */
+  }
 }
 
 .logo__item {
-    min-width: 180px;
+    width: 180px;
     height: 100px;
     background: white;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    color: var(--primary);
     flex-shrink: 0;
     box-shadow: 0 10px 30px rgba(1, 92, 145, 0.15);
     border: 3px solid var(--accent);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+}
+
+.logo__img {
+    max-width: 95%;
+    max-height: 95%; /* ajusta según lo que quieras */
+    object-fit: cover; /* mantiene proporción */
+    filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(500%) hue-rotate(170deg);
+    transition: filter 0.3s ease;
+}
+.logo__item:hover .logo__img {
+    filter: brightness(0) saturate(100%);
 }
 
 @keyframes scroll {
